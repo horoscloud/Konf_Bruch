@@ -8,7 +8,6 @@ public class Bruch {
         //FWG-ATTRIBUTE
         this.numerator = numerator;
         this.denominator = denominator;
-
     }
 
     public int getNumerator() {
