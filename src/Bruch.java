@@ -1,50 +1,51 @@
+/*
+* Übung Git Clone und Push - Bruch
+* Florian Wagenhofer_Gutruf
+* */
+
 public class Bruch {
 
+    //Variablen
     private int numerator; // Zähler
     private int denominator; // Nenner
 
+    //Konstruktor
     public Bruch(int numerator, int denominator) {
-        // TODO: Setzen Sie die Attribute entsprechend
-
-        //FWG-ATTRIBUTE
         this.numerator = numerator;
         this.denominator = denominator;
     }
 
+    //Getter Numerator
     public int getNumerator() {
         return numerator;
     }
 
+    //Getter Denominator
     public int getDenominator() {
         return denominator;
     }
 
+    //Gibt Bruch als Dezimahlzahl aus (Numerator / Denumerator)
     public double toDecimal() {
-        // TODO: Die Methode soll den Dezimalwert zum Bruch retournieren
-        // Achtung: Ganzzahldivision!
         return (double)numerator / denominator;
     }
 
+    //Gibt Bruch als String aus
     public String print() {
-        // TODO: Die Methode soll den Bruch als Text retournieren z.B.: "5 / 7"
         return numerator + "/" + denominator;
     }
 
+    //Multipliziert Bruch mit b2
     public Bruch multiplicate(Bruch b2) {
-        /* TODO:
-        *  Erstellen Sie für das Ergebnis eine neue Bruch-Variable
-        *   => Übergeben Sie im Konstruktur für numerator den
-        *       eigenen numerator multipliziert mit b2.getNumerator()
-        *   => Selbige auch für denominator
-        *  Retournieren Sie ihre neue Bruch-Variable
-        * */
+        Bruch erg_temp = new Bruch(getNumerator() * b2.getNumerator(), getDenominator() * b2.getDenominator());
 
-        return null;
+        return erg_temp;
     }
 
+    //Multipliziert Bruch mit b2 & b3
     public Bruch multiplicate(Bruch b2,  Bruch b3) {
-        // TODO: Multiplizieren Sie den eigenen Bruch mit b2 und b3
+        Bruch erg_temp = new Bruch(getNumerator() * b2.getNumerator() * b3.getNumerator(), getDenominator() * b2.getDenominator() * b3.getDenominator());
 
-        return null;
+        return erg_temp;
     }
 }
